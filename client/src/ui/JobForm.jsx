@@ -86,9 +86,7 @@ export default function JobForm({ selected, onCancel, onCreate, onUpdate }) {
         )}
       </div>
 
-      <p className="small" style={{ marginTop: 8 }}>
-        Tip: Add 8–12 applications to make your dashboard look real.
-      </p>
+      
     </form>
   );
 }

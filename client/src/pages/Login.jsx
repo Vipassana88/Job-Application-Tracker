@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import api from "../lib/api.js";
 import { saveAuth } from "../lib/auth.js";
 
+
+
 export default function Login() {
   const nav = useNavigate();
   const [email, setEmail] = useState("");
@@ -30,6 +32,10 @@ export default function Login() {
         <input className="input" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
         <input className="input" placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         <button className="btn" type="submit">Sign In</button>
+        <p className="small" style={{ marginTop: 10 }}>
+          <Link to="/forgot-password"><b>Forgot password?</b></Link>
+        </p>
+
       </form>
       <p className="small" style={{ marginTop: 12 }}>
         No account? <Link to="/register"><b>Create one</b></Link>
